@@ -18,6 +18,7 @@
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-bold: 700;
+    --radius-sm: 0.25rem;
     --radius-md: 0.375rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
@@ -247,9 +248,6 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
-  .w-\[20px\] {
-    width: 20px;
-  }
   .w-\[40px\] {
     width: 40px;
   }
@@ -343,6 +341,9 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -403,26 +404,14 @@
   .bg-\[url\(\)\] {
     background-image: url();
   }
-  .bg-\[url\(\.\/\)\] {
-    background-image: url(./);
-  }
   .bg-\[url\(\.\/bg-3\.png\)\] {
     background-image: url(./bg-3.png);
-  }
-  .bg-\[url\(\.\/bg1\.png\)\] {
-    background-image: url(./bg1.png);
-  }
-  .bg-\[url\(\.\/bg2\.png\)\] {
-    background-image: url(./bg2.png);
   }
   .bg-\[url\(\.\/bg9\.png\)\] {
     background-image: url(./bg9.png);
   }
-  .bg-\[url\(\.\/src\/\)\] {
-    background-image: url(./src/);
-  }
-  .bg-\[url\(i\)\] {
-    background-image: url(i);
+  .bg-\[url\(bg9\.png\)\] {
+    background-image: url(bg9.png);
   }
   .bg-cover {
     background-size: cover;
@@ -486,6 +475,9 @@
   }
   .pt-25 {
     padding-top: calc(var(--spacing) * 25);
+  }
+  .pr-23 {
+    padding-right: calc(var(--spacing) * 23);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
@@ -608,6 +600,11 @@
       width: calc(var(--spacing) * 166);
     }
   }
+  .lg\:w-345 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 345);
+    }
+  }
   .lg\:grid-cols-2 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -636,6 +633,16 @@
   .lg\:bg-cover {
     @media (width >= 64rem) {
       background-size: cover;
+    }
+  }
+  .lg\:py-0 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:pt-25 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 25);
     }
   }
   .lg\:pt-40 {
